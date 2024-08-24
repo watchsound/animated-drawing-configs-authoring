@@ -1,0 +1,150 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>r9</groupId>
+  <artifactId>bvh.simple</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>bvh.simple</name>
+  <url>http://maven.apache.org</url>
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+      <jme3_g>org.jmonkeyengine</jme3_g>
+    <jme3_v>3.5.2-stable</jme3_v>
+      <r9.locallib>C:\workspace\r9-project-local-libs\</r9.locallib>
+  </properties>
+
+   <repositories>
+    <repository>
+      <id>mvnrepository</id>
+      <url>https://repo1.maven.org/maven2/</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>${jme3_g}</groupId>
+      <artifactId>jme3-core</artifactId>
+      <version>${jme3_v}</version>
+    </dependency>
+    <dependency>
+      <groupId>${jme3_g}</groupId>
+      <artifactId>jme3-desktop</artifactId>
+      <version>${jme3_v}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>${jme3_g}</groupId>
+      <artifactId>jme3-lwjgl</artifactId>
+      <version>${jme3_v}</version>
+    </dependency> 
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.yaml</groupId>
+    <artifactId>snakeyaml</artifactId>
+    <version>1.21</version>            
+   </dependency>
+   
+   <dependency>
+	  <groupId>com.thoughtworks.xstream</groupId>
+	  <artifactId>xstream</artifactId>
+	  <version>1.4.20</version>
+	</dependency>
+    <dependency>
+	    <groupId>com.weblookandfeel</groupId>
+	    <artifactId>weblaf-ui</artifactId>
+	    <version>1.2.13</version>
+	</dependency>
+ 
+        <dependency>
+		    <groupId>r9</groupId>
+		    <artifactId>beautyeye_lnf</artifactId>
+		    <version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${r9.locallib}beautyeye_lnf.jar</systemPath>
+		 </dependency>
+		 
+  </dependencies>
+  
+  
+  <build>   
+    <resources>  
+        <resource>  
+            <directory>src/main/resources</directory>  
+            <includes>  
+                <include>**/*.properties</include>  
+                <include>**/*.xml</include>  
+                <include>**/*.tld</include>  
+                <include>**/*.png</include>  
+                 <include>**/*.jpg</include>  
+                  <include>**/*.gif</include>  
+                  <include>**/*.json</include>  
+                    <include>**/*.r9json</include>  
+                  <include>**/*.mp3</include>  
+                      <include>**/*.svg</include>  
+                       <include>**/*.drgm</include>  
+                         <include>**/*.js</include> 
+                            <include>**/*.css</include>  
+                             <include>**/*.bvh</include> 
+                                <include>**/*.yaml</include> 
+            </includes>  
+            <filtering>false</filtering>  
+        </resource>  
+        <resource>  
+            <directory>src/main/java</directory>  
+            <includes>  
+                <include>**/*.properties</include>  
+                <include>**/*.xml</include>  
+                <include>**/*.tld</include>  
+                <include>**/*.png</include>  
+                <include>**/*.jpg</include>  
+                 <include>**/*.gif</include>  
+                 <include>**/*.json</include>  
+                  <include>**/*.r9json</include>  
+                   <include>**/*.mp3</include>  
+                      <include>**/*.svg</include>  
+                          <include>**/*.drgm</include>  
+                              <include>**/*.js</include> 
+                            <include>**/*.css</include>  
+                             <include>**/*.bvh</include>  
+                                <include>**/*.yaml</include> 
+            </includes>  
+            <filtering>false</filtering>  
+        </resource>  
+        
+         <resource>  
+            <directory>src/test/java</directory>  
+            <includes>  
+                <include>**/*.properties</include>  
+                <include>**/*.xml</include>  
+                <include>**/*.tld</include>  
+                <include>**/*.png</include>  
+                <include>**/*.jpg</include>  
+                 <include>**/*.gif</include>  
+                 <include>**/*.json</include>  
+                  <include>**/*.r9json</include>  
+                   <include>**/*.mp3</include>  
+                      <include>**/*.svg</include>  
+                          <include>**/*.drgm</include>  
+                              <include>**/*.js</include> 
+                            <include>**/*.css</include>  
+                             <include>**/*.bvh</include>  
+                                <include>**/*.yaml</include> 
+            </includes>  
+            <filtering>false</filtering>  
+        </resource>  
+    </resources>  
+</build>
+</project>
